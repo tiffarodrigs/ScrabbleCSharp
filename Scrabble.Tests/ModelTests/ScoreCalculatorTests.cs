@@ -24,5 +24,16 @@ namespace Scrabble.Tests
       string result = testScore.UserWord;
       Assert.AreEqual(word, result);
     }
+
+
+    [TestMethod]
+    public void calculateScore_GetTheScore_Int()
+    {
+      // any necessary logic to prep for test; instantiating new classes, etc.
+      string word="cat";
+      ScoreCalculator testScore = new ScoreCalculator(word);
+      int result = testScore.calculateScore(word);
+      Assert.AreEqual(5, result);
+    }
   }
 }
